@@ -1,0 +1,24 @@
+{
+  "name": "prova-aluno-pedrodemaria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedro-de-Maria/prova-aluno-PedroDeMaria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedro-de-Maria/prova-aluno-PedroDeMaria/issues"
+  },
+  "homepage": "https://github.com/Pedro-de-Maria/prova-aluno-PedroDeMaria#readme",
+  "dependencies": {
+    "knex": "^0.95.14",
+    "sqlite3": "^5.0.2"
+  }
+}
