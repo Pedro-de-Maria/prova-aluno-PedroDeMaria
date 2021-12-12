@@ -16,12 +16,12 @@ db.serialize(() => {
     });
 
     //TABELA DE PRODUTOS, Migration: fazendo
-    db.run('creat table if not exists TB_PRODUTO(id_PRODUTO integer primary key autoincrement, descrição text, preco float)', (error) => {
+    db.run('creat table if not exists TB_PRODUTOS(id_PRODUTO integer primary key autoincrement, descricao text, preco float)', (error) => {
         if (error) console.log(error);
     });
 
     //TABELA DE PEDIDOS DOS PRODUTOS, Migration: a fazer
-    db.run('create table if not exists TB_PEDIDO_PRODUTO(id_PEDIDOS_PROD integer autoincrement, pedido_id integer, produto_id, quantidade integer, foreign key(produto_id) references TB_PRODUTO(id_PRODUTO), foreign key(pedido_id) references TB_PEDIDO(id_PEDIDO)', (error) =>{
+    db.run('create table if not exists TB_PEDIDO_PRODUTO(id_PEDIDOS_PROD integer autoincrement, pedido_id integer, produto_id integer, quantidade integer, foreign key(produto_id) references TB_PRODUTOS(id_PRODUTO), foreign key(pedido_id) references TB_PEDIDO(id_PEDIDO)', (error) =>{
         if (error) console.log(error);
     });
 
