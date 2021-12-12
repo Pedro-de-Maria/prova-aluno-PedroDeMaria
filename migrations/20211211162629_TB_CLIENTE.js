@@ -1,9 +1,16 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('TB_CLIENTE', table => {
-        table.integer('id_CLIENTE').primary().autoincrement()
+        table.increments('id_CLIENTE').primary()
         table.string('nome')
 
+    }).then(function() {
+        return knex('TB_CLIENTE').insert([
+            {nome: 'José'},
+            {nome: 'Maria'},
+            {nome: 'João'},
+            {nome: 'Ana'},
+        ])
     })
   
 };
