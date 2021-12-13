@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('TB_PEDIDO', table => {
-        table.increments('id_PEDIDO').primary()
+        table.primary('id_PEDIDO').primary()
         table.float('DATA_PEDIDO')
         table.integer('cliente_id').notNull().unique()
         table.foreign('cliente_id').refences('TB_CLIENTES.id_CLIENTE')
